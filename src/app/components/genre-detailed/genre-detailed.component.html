@@ -1,0 +1,12 @@
+<h2>
+    {{genre.name}}
+</h2>
+<div class="main">
+    <div *ngFor="let book of books">
+        <div class="card" routerLink="/book/{{book.id}}">
+            <div class="card_img"><img src="{{book.image}}" alt=""></div>
+            <div class="card_title">{{book.name}}</div>
+            <div class="card_price">price {{book.price}}</div>
+        </div>
+    </div>
+</div>

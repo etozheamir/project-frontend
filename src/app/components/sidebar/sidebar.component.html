@@ -1,0 +1,13 @@
+<div class="sidebar">
+    <div class="sidebar_item title">
+        Список жанров
+    </div>
+    <div class="sidebar_item" routerLink="main" routerLinkActive="active">
+        Все жанры
+    </div>
+    <div *ngFor="let genre of genres">
+        <div class="sidebar_item" routerLink="genres/{{genre.id}}" routerLinkActive="active">
+            {{genre.name}}
+        </div>
+    </div>
+</div>

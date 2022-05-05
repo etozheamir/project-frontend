@@ -1,0 +1,21 @@
+<div class="o">
+    <p>
+        Username: {{order.name}}
+    </p>
+    <p>
+        Address:{{order.address}}
+    </p>
+    <p>
+        Phone: {{order.phone}}
+    </p>
+    <p>
+        Book name: {{order.book.name}}
+    </p>
+    <p>
+        Book price: {{order.book.price}}
+    </p>
+    <div class="o_status">
+        <input placeholder="status" name="status" [(ngModel)]="orderInfo.status" type="text">
+    </div>
+    <div class="o_update"><button (click)="update()">Update</button></div>
+</div>

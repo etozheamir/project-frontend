@@ -1,0 +1,30 @@
+<div class="book">
+    <img src="{{book.image}}" alt="{{book.name}}">
+    <div class="book_text">
+        <div class="book_text__title">
+            {{book.name}}
+        </div>
+        <div class="book_text__author">
+            Автор: {{book.author}}
+        </div>
+        <div class="book_text__price">
+            Цена: {{book.price}}
+        </div>
+        <div class="book_text__description">
+            Описание: {{book.description}}
+        </div>
+    </div>
+
+    <div class="book_order">
+        <div class="book_order__title">
+            Заказать книгу:
+        </div>
+        <div class="book_order__inputs">
+            <input type="text" name="name" placeholder="Введите Имя" [(ngModel)]="order.name">
+            <input type="text" name="phone" placeholder="Введите номер телефона" [(ngModel)]="order.phone">
+            <input type="text" name="address" placeholder="Введите адрес" [(ngModel)]="order.address">
+            <button (click)="submit()">Заказать</button>
+        </div>
+    </div>
+
+</div>

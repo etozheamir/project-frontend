@@ -1,0 +1,21 @@
+<div class="admin">
+    <h2>Create a book</h2>
+    <input type="text" name="name" placeholder="book name" [(ngModel)]="book.name">
+    <input type="text" name="author" placeholder="book author" [(ngModel)]="book.author">
+    <input type="text" name="genre" placeholder="book genre" [(ngModel)]="book.genre">
+    <input type="text" name="description" placeholder="book description" [(ngModel)]="book.description">
+    <input type="text" name="price" placeholder="book price" [(ngModel)]="book.price">
+    <input type="text" name="image" placeholder="book image url" [(ngModel)]="book.image">
+    <p *ngIf="!logged">У вас нет доступа к созданию книги, сначала войдите в аккаунт.</p>
+    <button *ngIf="logged" (click)="create()">Добавить новую книгу</button>
+    <hr/>
+    <div class="book_list">
+        <div *ngFor="let o of orders">
+            <div class="book_list__item">
+                <div class="book_list__item___title">{{o.name}}</div>
+                <div class="book_list__item___edit" routerLink="/edit/{{o.id}}">Update</div>
+                <div class="book_list__item___delete" (click)="deleteOrder(o.id)">Delete</div>
+            </div>
+        </div>
+    </div>
+</div>

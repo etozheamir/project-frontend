@@ -1,0 +1,7 @@
+.regist {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+
+    grid-gap: 1rem;
+    padding-right: 1rem;
+}

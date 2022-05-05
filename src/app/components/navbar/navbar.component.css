@@ -1,0 +1,18 @@
+.navbar {
+    height: 70px;
+    background: rgb(26, 75, 58);
+    display: grid;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.login {
+    display: grid;
+    margin-right: 3rem;
+    justify-content: end;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+}
